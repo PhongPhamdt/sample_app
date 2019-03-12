@@ -3,10 +3,13 @@ vi:
   static_pages:
     home:
       title: "Trang chủ"
-      content_html: '<p>Đây là trang chủ
+      content_html: '<h1>Chào mừng đến với Sample App</h1>
+      <h2>
+      Đây là trang chủ của Ứng dụng
       <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
       .
-      </p>'
+      </h2>'
+      sign_up: "Đăng ký ngay!"
     help:
       title: "Trợ giúp"
       content_html: '<p>Trợ giúp từ Ruby on Rails Tutorial tại
@@ -33,3 +36,19 @@ vi:
   layouts:
     application:
       default_title: " Ứng dụng đơn giản cho Ruby on Rails"
+    header:
+      home: "Trang chủ"
+      help: "Trợ Giúp"
+      log_in: "Đăng nhập"
+      sample_app: "sample app"
+    footer:
+      news_html: '<a href="http://news.railstutorial.org/">tin tức</a>'
+      about: "About"
+      contact: "Liên hệ"
+      content_html: '<a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+      bởi <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
+  user:
+    new:
+      title: "Đăng ký"
+      content_html: '<h1>Đăng ký</h1>
+      <p>Đây là trang đăng ký cho người dùng mới.</p>'
