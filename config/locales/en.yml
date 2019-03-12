@@ -32,4 +32,4 @@ en:
       content_html: '<p>Find me in app/views/static_pages/contact.html.erb</p>'
   layouts:
     application:
-      title: " Ruby on Rails Sample App"
+      default_title: " Ruby on Rails Sample App"

@@ -32,4 +32,4 @@ vi:
       content_html: '<p>Tìm trong app/views/static_pages/contact.html.erb</p>'
   layouts:
     application:
-      title: " Ứng dụng đơn giản cho Ruby on Rails"
+      default_title: " Ứng dụng đơn giản cho Ruby on Rails"
