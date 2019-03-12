@@ -3,10 +3,13 @@ en:
   static_pages:
     home:
       title: "Home"
-      content_html: '<p>This is the home page for the
+      content_html: '<h1>Welcome to the Sample App</h1>
+      <h2>
+      This is the home page for the
       <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
       sample application.
-      </p>'
+      </h2>'
+      sign_up: "Sign up now!"
     help:
       title: "Help"
       content_html: '<p>Get help on the Ruby on Rails Tutorial at the
@@ -33,3 +36,19 @@ en:
   layouts:
     application:
       default_title: " Ruby on Rails Sample App"
+    header:
+      home: "Home"
+      help: "Help"
+      log_in: "Log in"
+      sample_app: "sample app"
+    footer:
+      news_html: '<a href="http://news.railstutorial.org/">news</a>'
+      about: "About"
+      contact: "Contact"
+      content_html: 'The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+      by <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
+  user:
+    new:
+      title: "Sign up"
+      content_html: '<h1>Sign up</h1>
+      <p>This will be a signup page for new users.</p>'
