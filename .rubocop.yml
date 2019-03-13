@@ -19,7 +19,9 @@ AllCops:
     - 'spec/**/*'
     - 'script/rails'
     - 'config/**/*'
-
+    - 'Rakefile'
+    - 'config.ru'
+    - 'app/assets/stylesheets/**'
 # Indent private/protected/public as deep as method definitions
 Layout/AccessModifierIndentation:
   EnforcedStyle: indent
