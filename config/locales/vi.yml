@@ -1,5 +1,4 @@
 vi:
-  hello: "Xin chào thế giới"
   static_pages:
     home:
       title: "Trang chủ"
@@ -47,8 +46,20 @@ vi:
       contact: "Liên hệ"
       content_html: '<a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
       bởi <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
-  user:
+  users:
     new:
       title: "Đăng ký"
-      content_html: '<h1>Đăng ký</h1>
-      <p>Đây là trang đăng ký cho người dùng mới.</p>'
+      name: "Tên"
+      email: "Email"
+      password: "Mật khẩu"
+      password_confirm: "Xác nhận mật khẩu"
+      submit: "Tạo tài khoản"
+      date_of_birth: "Ngày tháng năm sinh"
+      gender: "Giới tính"
+      male: "Nam"
+      female: "Nữ"
+    show:
+      title: "Hiển thị"
+      flash_danger: "Không tìm thấy người dùng!"
+    create:
+      flash_success: "Chào mừng đến với Sample App!"
