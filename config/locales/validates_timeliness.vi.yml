@@ -1,0 +1,16 @@
+vi:
+  errors:
+    messages:
+      invalid_date: "Sai định dạng ngày"
+      invalid_time: "Sai định dạng thời gian"
+      invalid_datetime: "Sai định dạng ngày giờ"
+      is_at: " %{restriction}"
+      before: "Trước %{restriction}"
+      on_or_before: "Từ trước đến nay %{restriction}"
+      after: "Sau %{restriction}"
+      on_or_after: "Từ nay về sau %{restriction}"
+  validates_timeliness:
+    error_value_formats:
+      date: '%Y-%m-%d'
+      time: '%H:%M:%S'
+      datetime: '%Y-%m-%d %H:%M:%S'

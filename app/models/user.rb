@@ -11,12 +11,17 @@ class User < ApplicationRecord
   validates :password, presence: true,
   length: {minimum: Settings.minimum_password_length}
 
+  validates :gender, presence: true, inclusion: %w(male female)
+
+  validates :date_of_birth,
+    timeliness: {on_or_before: ->{Date.current}, type: :date}
+
   before_save{downcase}
 
   has_secure_password
 
   private
   def downcase
-    self.email.downcase!
+    email.downcase!
   end
 end

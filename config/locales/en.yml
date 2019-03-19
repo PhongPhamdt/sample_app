@@ -1,5 +1,4 @@
 en:
-  hello: "Hello world"
   static_pages:
     home:
       title: "Home"
@@ -47,8 +46,20 @@ en:
       contact: "Contact"
       content_html: 'The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
       by <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
-  user:
+  users:
     new:
       title: "Sign up"
-      content_html: '<h1>Sign up</h1>
-      <p>This will be a signup page for new users.</p>'
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirm: "Confirmation"
+      submit: "Create my account"
+      date_of_birth: "Date of Birth"
+      gender: "Gender"
+      male: "Male"
+      female: "Female"
+    show:
+      title: "Show"
+      flash_danger: "User not found!"
+    create:
+      flash_success: "Welcome to the Sample App!"
