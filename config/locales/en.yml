@@ -40,6 +40,11 @@ en:
       help: "Help"
       log_in: "Log in"
       sample_app: "sample app"
+      log_out: "Log out"
+      account: "Account"
+      profile: "Profile"
+      user: "User"
+      settings: "Settings"
     footer:
       news_html: '<a href="http://news.railstutorial.org/">news</a>'
       about: "About"
@@ -63,3 +68,14 @@ en:
       flash_danger: "User not found!"
     create:
       flash_success: "Welcome to the Sample App!"
+  sessions:
+    new:
+      title: "Log in"
+      submit: "Log in"
+      new_user: "New User ?"
+      sign_up: "Sign up now!"
+      email: "Email"
+      password: "Password"
+    create:
+      flash_danger: "Invalid email/password combination"
+

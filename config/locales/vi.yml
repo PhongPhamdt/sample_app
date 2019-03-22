@@ -40,6 +40,11 @@ vi:
       help: "Trợ Giúp"
       log_in: "Đăng nhập"
       sample_app: "sample app"
+      log_out: "Đăng xuất"
+      account: "Tài Khoản"
+      profile: "Trang cá nhân"
+      user: "Người dùng"
+      settings: "Cài Đặt"
     footer:
       news_html: '<a href="http://news.railstutorial.org/">tin tức</a>'
       about: "About"
@@ -63,3 +68,13 @@ vi:
       flash_danger: "Không tìm thấy người dùng!"
     create:
       flash_success: "Chào mừng đến với Sample App!"
+  sessions:
+    new:
+      title: "Đăng nhập"
+      submit: "Đăng nhập"
+      new_user: "Người dùng mới ?"
+      sign_up: "Đăng ký ngay !"
+      email: "Email"
+      password: "Mật khẩu"
+    create:
+      flash_danger: "Không khớp email, mật khẩu"
