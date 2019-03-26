@@ -76,6 +76,7 @@ en:
       sign_up: "Sign up now!"
       email: "Email"
       password: "Password"
+      checkbox: "Remember me on this computer"
     create:
       flash_danger: "Invalid email/password combination"
 
