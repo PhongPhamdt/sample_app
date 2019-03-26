@@ -76,5 +76,6 @@ vi:
       sign_up: "Đăng ký ngay !"
       email: "Email"
       password: "Mật khẩu"
+      checkbox: "Nhớ trên máy tính này"
     create:
       flash_danger: "Không khớp email, mật khẩu"
