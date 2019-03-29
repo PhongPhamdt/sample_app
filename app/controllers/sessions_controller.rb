@@ -21,6 +21,6 @@ class SessionsController < ApplicationController
     log_in user
     check = params[:session][:remember_me]
     check == Settings.check_box.to_s ? remember(user) : forget(user)
-    redirect_to user
+    redirect_back_or user
   end
 end

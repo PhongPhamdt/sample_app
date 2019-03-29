@@ -1,31 +1,10 @@
 <% provide :title, t(".title") %>
+<% provide :button_text, t(".submit") %>
+<% provide :url, signup_path %>
 <h1><%= t ".title" %></h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_with model: @user, url: signup_path, local: true do |f| %>
-    <%= render "shared/error_messages" %>
-    <%= f.label :name, t(".name") %>
-    <%= f.text_field :name, class: "form-control" %>
-
-    <%= f.label :email, t(".email") %>
-    <%= f.email_field :email, class: "form-control" %>
-
-    <%= f.label :password, t(".password") %>
-    <%= f.password_field :password, class: "form-control" %>
-
-    <%= f.label :password_confirmation, t(".password_confirm") %>
-    <%= f.password_field :password_confirmation, class: "form-control" %>
-
-    <%= f.label :gender, t(".gender") %>
-    <div class="form-control">
-      <%= f.select :gender, [[t(".male"), "male"], [t(".female"), "female"]] %>
-    </div>
-
-    <%= f.label :date_of_birth, t(".date_of_birth") %>
-    <%= f.date_field :date_of_birth, class: "form-control" %>
-
-    <%= f.submit t(".submit"), class: "btn btn-primary" %>
-    <% end %>
+    <%= render "form" %>
   </div>
 </div>
