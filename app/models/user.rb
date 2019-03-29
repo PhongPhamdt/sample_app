@@ -11,7 +11,7 @@ class User < ApplicationRecord
   format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
 
   validates :password, presence: true,
-  length: {minimum: Settings.minimum_password_length}
+  length: {minimum: Settings.minimum_password_length}, allow_nil: true
 
   validates :gender, presence: true, inclusion: %w(male female)
 
@@ -35,18 +35,6 @@ class User < ApplicationRecord
     BCrypt::Password.create(string, cost: cost)
   end
 
-  def current_user
-    if (user_id = session[:user_id])
-      @current_user ||= User.find_by id: user_id
-    elsif (user_id = cookies.signed[:user_id])
-      user = User.find_by id: user_id
-      if user&.authenticated?(cookies[:remember_token])
-        log_in user
-        @current_user = user
-      end
-    end
-  end
-
   def remember
     @remember_token = User.new_token
     update remember_digest: User.digest(remember_token)
@@ -59,6 +47,10 @@ class User < ApplicationRecord
 
   def forget
     update remember_digest: nil
+  end
+
+  def current_user? _user
+    self == _user
   end
 
   private

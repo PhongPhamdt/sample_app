@@ -65,9 +65,34 @@ vi:
       female: "Nữ"
     show:
       title: "Hiển thị"
-      flash_danger: "Không tìm thấy người dùng!"
     create:
       flash_success: "Chào mừng đến với Sample App!"
+    edit:
+      title: "Chỉnh sửa người dùng"
+      name: "Tên"
+      email: "Email"
+      password: "Mật khẩu"
+      password_confirm: "Xác nhận mật khẩu"
+      submit: "Lưu thay đổi"
+      date_of_birth: "Ngày tháng năm sinh"
+      gender: "Giới tính"
+      male: "Nam"
+      female: "Nữ"
+      description: "Cập nhật trang cá nhân"
+      change: "thay đổi"
+    find_user:
+      flash_danger: "Không tìm thấy người dùng!"
+    logged_in_user:
+      flash_danger: "Xin hãy đăng nhập"
+    destroy:
+      flash_danger: "Không thể xóa"
+      flash_success: "Đã xóa người dùng"
+    index:
+      title: "Tất cả người dùng"
+      delete: "Xoá"
+    update:
+      flash_success: "Đã cập nhật thành công"
+
   sessions:
     new:
       title: "Đăng nhập"

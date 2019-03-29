@@ -65,9 +65,33 @@ en:
       female: "Female"
     show:
       title: "Show"
-      flash_danger: "User not found!"
     create:
       flash_success: "Welcome to the Sample App!"
+    edit:
+      title: "Edit user"
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirm: "Confirmation"
+      submit: "Save changes"
+      date_of_birth: "Date of Birth"
+      gender: "Gender"
+      male: "Male"
+      female: "Female"
+      description: "Update your profile"
+      change: "change"
+    find_user:
+      flash_danger: "User not found!"
+    logged_in_user:
+      flash_danger: "Please log in"
+    destroy:
+      flash_danger: "Cannot delete"
+      flash_success: "User Deleted"
+    index:
+      title: "All Users"
+      delete: "delete"
+    update:
+      flash_success: "Profile updated"
   sessions:
     new:
       title: "Log in"
