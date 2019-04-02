@@ -1,4 +1,7 @@
 en:
+  shared:
+    micropost_form:
+      placeholder: "Compose new micropost..."
   static_pages:
     home:
       title: "Home"
@@ -9,6 +12,8 @@ en:
       sample application.
       </h2>'
       sign_up: "Sign up now!"
+      feed: "Micropost Feed"
+      alert: "Maximum file size is 5MB. Please choose a smaller file."
     help:
       title: "Help"
       content_html: '<p>Get help on the Ruby on Rails Tutorial at the
@@ -65,6 +70,7 @@ en:
       female: "Female"
     show:
       title: "Show"
+      micro: "Microposts"
     create:
       flash_success: "Welcome to the Sample App!"
     edit:
@@ -82,8 +88,6 @@ en:
       change: "change"
     find_user:
       flash_danger: "User not found!"
-    logged_in_user:
-      flash_danger: "Please log in"
     destroy:
       flash_danger: "Cannot delete"
       flash_success: "User Deleted"
@@ -103,4 +107,15 @@ en:
       checkbox: "Remember me on this computer"
     create:
       flash_danger: "Invalid email/password combination"
-
+  microposts:
+    create:
+      flash_success: "Micropost created!"
+    destroy:
+      flash_success: "Micropost deleted!"
+    micropost:
+      post: "Posted"
+      ago: "ago."
+      delete: "delete"
+  micropost:
+    picture_size:
+      warning: "should be less than 5MB"

@@ -54,13 +54,6 @@ class UsersController < ApplicationController
       :password_confirmation, :gender, :date_of_birth)
   end
 
-  def logged_in_user
-    return if logged_in?
-    store_location
-    flash[:danger] = t ".flash_danger"
-    redirect_to login_url
-  end
-
   def correct_user
     redirect_to(root_url) unless current_user.current_user? @user
   end
@@ -71,6 +64,7 @@ class UsersController < ApplicationController
 
   def find_user
     @user = User.find_by id: params[:id]
+    @microposts = @user.microposts.paginate(page: params[:page])
 
     return if @user
     flash[:danger] = t ".flash_danger"
