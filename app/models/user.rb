@@ -3,6 +3,8 @@ class User < ApplicationRecord
 
   attr_reader :remember_token
 
+  has_many :microposts, dependent: :destroy
+
   validates :name, presence: true,
   length: {maximum: Settings.maximum_name_length}
 
@@ -49,8 +51,8 @@ class User < ApplicationRecord
     update remember_digest: nil
   end
 
-  def current_user? _user
-    self == _user
+  def current_user? user
+    self == user
   end
 
   private

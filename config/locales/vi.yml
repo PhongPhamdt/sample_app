@@ -1,4 +1,7 @@
 vi:
+  shared:
+    micropost_form:
+      placeholder: "Tạo bài đăng mới"
   static_pages:
     home:
       title: "Trang chủ"
@@ -9,6 +12,9 @@ vi:
       .
       </h2>'
       sign_up: "Đăng ký ngay!"
+      feed: "Bảng tin"
+      alert: "Kích thước file lớn nhất là 5MB. Xin vui lòng chọn
+       file có kích thước nhỏ hơn"
     help:
       title: "Trợ giúp"
       content_html: '<p>Trợ giúp từ Ruby on Rails Tutorial tại
@@ -65,6 +71,7 @@ vi:
       female: "Nữ"
     show:
       title: "Hiển thị"
+      micro: "Bài đăng"
     create:
       flash_success: "Chào mừng đến với Sample App!"
     edit:
@@ -82,8 +89,6 @@ vi:
       change: "thay đổi"
     find_user:
       flash_danger: "Không tìm thấy người dùng!"
-    logged_in_user:
-      flash_danger: "Xin hãy đăng nhập"
     destroy:
       flash_danger: "Không thể xóa"
       flash_success: "Đã xóa người dùng"
@@ -92,7 +97,6 @@ vi:
       delete: "Xoá"
     update:
       flash_success: "Đã cập nhật thành công"
-
   sessions:
     new:
       title: "Đăng nhập"
@@ -104,3 +108,15 @@ vi:
       checkbox: "Nhớ trên máy tính này"
     create:
       flash_danger: "Không khớp email, mật khẩu"
+  microposts:
+    create:
+      flash_success: "Đã tạo bài đăng!"
+    destroy:
+      flash_success: "Đã xóa bài đăng!"
+    micropost:
+      post: "Đã đăng"
+      ago: "trước."
+      delete: "xóa"
+  micropost:
+    picture_size:
+      warning: "phải ít hơn 5MB"

@@ -3,3 +3,7 @@ maximum_name_length: 50
 minimum_password_length: 6
 gravatar_size: 80
 check_box: 1
+maximum_content: 140
+micropost_gravatar_size: 50
+current_user_gravatar_size: 50
+size_in_megabyte: 5
