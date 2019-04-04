@@ -9,7 +9,9 @@ class MicropostsController < ApplicationController
       flash[:success] = t ".flash_success"
       redirect_to root_url
     else
-      @feed_items = []
+      @feed_items =
+        current_user.microposts.sort_by_created
+                    .paginate page: params[:page], per_page: Settings.per_page
       render "static_pages/home"
     end
   end
@@ -31,6 +33,6 @@ class MicropostsController < ApplicationController
 
   def correct_user
     @micropost = current_user.microposts.find_by id: params[:id]
-    redirect_to root_url if @micropost.blank?
+    redirect_to root_url unless @micropost
   end
 end

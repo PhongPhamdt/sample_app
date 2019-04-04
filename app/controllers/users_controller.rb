@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.paginate page: params[:page]
+    @users = User.paginate page: params[:page], per_page: Settings.per_page
   end
 
   def new
@@ -24,7 +24,10 @@ class UsersController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @follow = current_user.active_relationships.build
+    @unfollow = current_user.active_relationships.find_by followed_id: @user.id
+  end
 
   def edit; end
 
@@ -64,7 +67,8 @@ class UsersController < ApplicationController
 
   def find_user
     @user = User.find_by id: params[:id]
-    @microposts = @user.microposts.paginate(page: params[:page])
+    @microposts =
+      @user.microposts.paginate page: params[:page], per_page: Settings.per_page
 
     return if @user
     flash[:danger] = t ".flash_danger"
