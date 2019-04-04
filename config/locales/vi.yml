@@ -1,7 +1,29 @@
 vi:
+  relationships:
+    index:
+      following: "Đang theo dõi"
+      followers: "Người theo dõi"
+  followers:
+    show:
+      title: "Người theo dõi"
+  following:
+    show:
+      title: "Đang theo dõi"
+  will_paginate:
+    next_label: "Tiếp"
+    previous_label: "Trước"
   shared:
     micropost_form:
       placeholder: "Tạo bài đăng mới"
+      post: "Đăng"
+      alert: "Kích thước file lớn nhất là 5MB. Xin vui lòng chọn
+      file có kích thước nhỏ hơn"
+    stats:
+      followers: "Người theo dõi"
+      following: "Đang theo dõi"
+    user_info:
+      view: "xem hồ sơ của tôi"
+      micro: "bài đăng"
   static_pages:
     home:
       title: "Trang chủ"
@@ -13,8 +35,8 @@ vi:
       </h2>'
       sign_up: "Đăng ký ngay!"
       feed: "Bảng tin"
-      alert: "Kích thước file lớn nhất là 5MB. Xin vui lòng chọn
-       file có kích thước nhỏ hơn"
+      following: "Đang theo dõi"
+      followers: "Người theo dõi"
     help:
       title: "Trợ giúp"
       content_html: '<p>Trợ giúp từ Ruby on Rails Tutorial tại
@@ -58,6 +80,10 @@ vi:
       content_html: '<a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
       bởi <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
   users:
+    followers:
+      title: "Người theo dõi"
+    following:
+      title: "Đang theo dõi"
     new:
       title: "Đăng ký"
       name: "Tên"
@@ -94,9 +120,16 @@ vi:
       flash_success: "Đã xóa người dùng"
     index:
       title: "Tất cả người dùng"
+    user:
       delete: "Xoá"
     update:
       flash_success: "Đã cập nhật thành công"
+    follow:
+      follow: "Theo dõi"
+    unfollow:
+      unfollow: "Bỏ theo dõi"
+    show_follow:
+      micro: "Bài đăng: "
   sessions:
     new:
       title: "Đăng nhập"
@@ -117,6 +150,10 @@ vi:
       post: "Đã đăng"
       ago: "trước."
       delete: "xóa"
+      confirm: "Chắc không :)"
   micropost:
     picture_size:
       warning: "phải ít hơn 5MB"
+  errors:
+    messages:
+      mini_magick_processing_error: "lỗi file ????"

@@ -3,17 +3,19 @@
   <div class="field">
     <%= f.text_area :content, placeholder: t(".placeholder") %>
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
+  <%= f.submit t(".post"), class: "btn btn-primary" %>
   <span class="picture">
     <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png" %>
   </span>
 <% end %>
 
 <script type="text/javascript">
-  $("#micropost_picture").bind("change", () => {
-    let size_in_megabytes = this.files[0].size/1024/1024;
-    if (size_in_megabytes > Settings.size_in_megabytes) {
-      alert(I18n.t(".alert"));
+  $('#micropost_picture').bind('change', function() {
+    I18n.defaultLocale = "<%= I18n.default_locale %>";
+    I18n.locale = "<%= I18n.locale %>";
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert(I18n.t("shared.micropost_form.alert"));
     }
   });
 </script>

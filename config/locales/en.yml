@@ -1,7 +1,28 @@
 en:
+  relationships:
+    index:
+      following: "Following"
+      followers: "Followers"
+  followers:
+    show:
+      title: "Followers"
+  following:
+    show:
+      title: "Following"
+  will_paginate:
+    next_label: "Next"
+    previous_label: "Previous"
   shared:
     micropost_form:
       placeholder: "Compose new micropost..."
+      post: "Post"
+      alert: "Maximum file size is 5MB. Please choose a smaller file."
+    stats:
+      followers: "Followers"
+      following: "Following"
+    user_info:
+      view: "view my profile"
+      micro: "microposts"
   static_pages:
     home:
       title: "Home"
@@ -13,7 +34,8 @@ en:
       </h2>'
       sign_up: "Sign up now!"
       feed: "Micropost Feed"
-      alert: "Maximum file size is 5MB. Please choose a smaller file."
+      following: "Following"
+      followers: "Follower"
     help:
       title: "Help"
       content_html: '<p>Get help on the Ruby on Rails Tutorial at the
@@ -57,6 +79,10 @@ en:
       content_html: 'The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
       by <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
   users:
+    followers:
+      title: "Followers"
+    following:
+      title: "Following"
     new:
       title: "Sign up"
       name: "Name"
@@ -93,9 +119,16 @@ en:
       flash_success: "User Deleted"
     index:
       title: "All Users"
+    user:
       delete: "delete"
     update:
       flash_success: "Profile updated"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
+    show_follow:
+      micro: "Microposts: "
   sessions:
     new:
       title: "Log in"
@@ -116,6 +149,10 @@ en:
       post: "Posted"
       ago: "ago."
       delete: "delete"
+      confirm: "You sure?"
   micropost:
     picture_size:
       warning: "should be less than 5MB"
+  errors:
+    messages:
+      mini_magick_processing_error: "file ERROR ????"
