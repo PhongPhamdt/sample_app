@@ -1,4 +1,15 @@
 vi:
+  user_mailer:
+    account_activation:
+      subject: "Kích hoạt tài khoản"
+      activate: "Kích hoạt"
+      body: "Chào mừng đến với Sample_App!
+      Ấn vào link bên dưới để kích hoạt tài khoản nào bro"
+      title: "Sample_App"
+  account_activations:
+    edit:
+      flash_success: "Đã kích hoạt tài khoản"
+      flash_danger: "Lỗi đường dẫn kích hoạt"
   relationships:
     index:
       following: "Đang theo dõi"
@@ -100,6 +111,7 @@ vi:
       micro: "Bài đăng"
     create:
       flash_success: "Chào mừng đến với Sample App!"
+      flash_info: "Kiểm tra mail để kích hoạt tài khoản bạn êi."
     edit:
       title: "Chỉnh sửa người dùng"
       name: "Tên"
@@ -141,6 +153,8 @@ vi:
       checkbox: "Nhớ trên máy tính này"
     create:
       flash_danger: "Không khớp email, mật khẩu"
+      message1: "Tài khoản chưa kích hoạt. "
+      message2: "Kiểm tra mail, có link kích hoạt rùi đó bạn êi."
   microposts:
     create:
       flash_success: "Đã tạo bài đăng!"

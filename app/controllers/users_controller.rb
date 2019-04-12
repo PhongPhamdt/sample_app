@@ -5,7 +5,8 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.paginate page: params[:page], per_page: Settings.per_page
+    @users = User.where(activated: true).paginate(page: params[:page],
+      per_page: Settings.per_page)
   end
 
   def new
@@ -16,9 +17,9 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      log_in @user
-      flash[:success] = t ".flash_success"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t ".flash_info"
+      redirect_to root_url
     else
       render :new
     end
@@ -27,6 +28,7 @@ class UsersController < ApplicationController
   def show
     @follow = current_user.active_relationships.build
     @unfollow = current_user.active_relationships.find_by followed_id: @user.id
+    redirect_to(root_url) && return unless logged_in?
   end
 
   def edit; end
@@ -54,7 +56,7 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:name, :email, :password,
-      :password_confirmation, :gender, :date_of_birth)
+      :password_confirmation, :gender, :date_of_birth, :activation_digest)
   end
 
   def correct_user

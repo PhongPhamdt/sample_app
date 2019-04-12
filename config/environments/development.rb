@@ -31,7 +31,25 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  # host = 'localhost:3000' # Don't use this literally; use your local dev host instead
+  # Use this on the cloud IDE.
+  # config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  # Use this if developing on localhost.
+  # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+  config.action_mailer.smtp_settings =
+  {
+    :address=> "smtp.gmail.com",
+    :port => 587,
+    :user_name => ENV['gmail_username'],
+    :password=> ENV['gmail_password'],
+    :authentication=> "plain",
+    :enable_starttls_auto=>true
+  }
+
+  host = 'localhost:3000'
+  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
 
   config.action_mailer.perform_caching = false
 

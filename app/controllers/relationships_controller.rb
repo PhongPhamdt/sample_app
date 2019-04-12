@@ -3,15 +3,11 @@ class RelationshipsController < ApplicationController
 
   def index
     @title = t ".#{params[:type]}"
-    @user = User.find_by id: params[:id]
-    redirect_to root_path unless @user
+    check params[:id]
     if params[:type] == "following"
-      @users = @user.following.paginate page: params[:page]
-      render "users/show_follow"
-
+      ren_following params[:page]
     elsif params[:type] == "followers"
-      @users = @user.followers.paginate page: params[:page]
-      render "users/show_follow"
+      ren_followers params[:page]
     end
   end
 
@@ -31,5 +27,20 @@ class RelationshipsController < ApplicationController
       format.html{redirect_to @user}
       format.js
     end
+  end
+
+  def check uid
+    @user = User.find_by id: uid
+    redirect_to root_path unless @user
+  end
+
+  def ren_following page_num
+    @users = @user.following.paginate page: page_num
+    render "users/show_follow"
+  end
+
+  def ren_followers page_num
+    @users = @user.followers.paginate page: page_num
+    render "users/show_follow"
   end
 end

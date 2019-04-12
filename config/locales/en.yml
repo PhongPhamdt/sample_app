@@ -1,4 +1,15 @@
 en:
+  user_mailer:
+    account_activation:
+      subject: "Account activation"
+      activate: "Activate"
+      body: "Welcome to the Sample App!
+      Click on the link below to activate your account:"
+      title: "Sample_APP"
+  account_activations:
+    edit:
+      flash_success: "Account activated!"
+      flash_danger: "Invalid activation link"
   relationships:
     index:
       following: "Following"
@@ -99,6 +110,7 @@ en:
       micro: "Microposts"
     create:
       flash_success: "Welcome to the Sample App!"
+      flash_info: "Please check your email to activate your account."
     edit:
       title: "Edit user"
       name: "Name"
@@ -140,6 +152,8 @@ en:
       checkbox: "Remember me on this computer"
     create:
       flash_danger: "Invalid email/password combination"
+      message1: "Account not activated. "
+      message2: "Check your email for the activation link."
   microposts:
     create:
       flash_success: "Micropost created!"
